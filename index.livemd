@@ -1,5 +1,17 @@
 # AOC 2022
 
+```elixir
+defmodule Input do
+  def load(num) do
+    [
+      File.read!("./#{num}.test.txt"),
+      File.read!("./#{num}.input.txt")
+    ]
+    |> Enum.map(&String.split(&1, "\n"))
+  end
+end
+```
+
 ## Day One
 
 --- Day 1: Calorie Counting ---
